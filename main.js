@@ -10,20 +10,9 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-const pigLatin = (word1) => {
+const pigLatin = (word) => {
   // Your code here
-  let word = word1.trim().toLowerCase();
-
-  // if (word === 'car'){
-  //   return "arcay"
-  // }else if (word === 'dog'){
-  //   return "ogday"
-  // }else if (word === 'create'){
-  //   return "eatecray"
-  // }else if (word === 'valley'){
-  //   return "alleyvay"
-  // }
-
+  word = word.trim().toLowerCase();
   let vowels = ["a", "e", "i", "o", "u"];
   let newStr = "";
   if (vowels.indexOf(word[0]) > -1) {
@@ -35,6 +24,7 @@ const pigLatin = (word1) => {
     newStr = word.substring(vowel) + word.substring(0, vowel) + "ay";
     return newStr;
   }
+  
 };
 
 // the first function called in the program to get an input from the user
@@ -72,6 +62,8 @@ if (typeof describe === "function") {
 } else {
   getPrompt();
 }
+
+
 
 // **********
 //   HINTS
